@@ -1,0 +1,83 @@
+---
+title: "HW 03 - Legos"
+author: "Your Name"
+date:  "Today's Date"
+output: 
+  html_document: 
+    theme: cerulean
+---
+
+This homework assignment reviews some of the data wrangling skills we have been working on the past several weeks.
+
+# Packages
+
+In this assignment we will work with the `tidyverse` as usual:
+
+```{r load-package, message = FALSE}
+library(tidyverse)
+```
+
+## Lego sales
+
+The data set `lego_sales` contains simulated lego set purchases in the U.S., based on actual prices, for the year 2018. The data set is called `lego_sales` and you can load it using the following code:
+```{r load-data}
+load(file = "lego_sales.rda")
+```
+Each row in the data set represents a lego set purchase.  The variables in this data set are as follows:
+
+**first_name**:  first name of customer
+
+**last_name**:  last name of customer
+
+**age**:  age of customer
+
+**phone_number**:  phone number of customer
+
+**set_id**:  ID of lego set purchased
+
+**number**:  item number of lego set purchased
+
+**theme**:  theme of lego set purchased
+
+**subtheme**:  sub-theme of lego set purchased
+
+**year**:  year of purchase
+
+**name**:  name of lego set purchased
+
+**pieces**:  number of pieces of legos in set purchased
+
+**us_price**:  price of set purchased, in U.S. dollars
+
+**image_url**:  image url of lego set purchased
+
+**quantity**:  quantity of lego sets purchased
+
+----------
+
+**Instructions:  Answer the following questions using pipelines. For each question, state your answer in a sentence, e.g. "The first three common names of purchasers are ...".**
+
+1. What are the three most common first names of purchasers?
+
+2. What are the three most common themes of lego sets purchased?
+
+3. Among the most common three themes of lego sets purchased, what is the most common 
+subtheme?  *Hint:*  use your answer from question 2 to filter the data.
+
+
+4. Create a new variable called `age_group` and group the ages into the 
+following categories: "18 and under", "19 - 25", "26 - 35", "36 - 50", "51 and over".  *Hint:* Use the `case_when()` function: [case-when-doc](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8/topics/case_when)
+
+
+5. Which age group has purchased the highest total number of lego sets? *Hint:* some purchases are for more than one lego set, so it is not sufficient to just count the number of observations in each age category.
+
+
+6. Which age group has spent the most money on legos?
+
+7. Come up with a question you want to answer using these data, and write it down. 
+Then, create a data visualization that answers the question, and explain how 
+your visualization answers the question.
+
+**Finishing Up:  Be sure to knit one last time and push your final .Rmd and .html files to your repository.  Also, please create a pdf file of your html file and push that as well.**
+
+
